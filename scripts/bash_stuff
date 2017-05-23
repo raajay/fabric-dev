@@ -1,0 +1,32 @@
+alias ga='git add'
+alias gA='git add -A'
+alias gb='git branch'
+alias gcm='git commit -m '
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gs='git status --short -b'
+alias gS='git status --short -b -uno'
+alias log='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
+alias e='emacsclient -c '
+alias push='git push'
+alias pull='git pull --rebase'
+
+# directories
+alias bosen='cd /media/raajay/MLFABRIC/pmls/bosen-private'
+
+# Custom functions
+function c {
+    new_directory="$*";
+    if [ $# -eq 0 ]; then
+        new_directory=${HOME};
+    fi;
+    builtin cd "${new_directory}"
+}
+
+function cd {
+    new_directory="$*";
+    if [ $# -eq 0 ]; then
+        new_directory=${HOME};
+    fi;
+    builtin cd "${new_directory}" && ls -pGF
+}
