@@ -13,8 +13,12 @@ alias e='emacsclient -c '
 alias push='git push'
 alias pull='git pull --rebase'
 
+alias tls='tmux list-session'
+alias tatt='tmux attach-session -d -t '
+
 # directories
 alias bosen='cd /media/raajay/MLFABRIC/pmls/bosen-private'
+alias ml='cd /media/raajay/MLFABRIC'
 
 # Custom functions
 function c {

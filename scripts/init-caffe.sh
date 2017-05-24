@@ -5,6 +5,7 @@ sudo apt-get install --assume-yes libprotobuf-dev libleveldb-dev libsnappy-dev l
 sudo apt-get install --assume-yes --no-install-recommends libboost-all-dev
 sudo apt-get install --assume-yes libgflags-dev libgoogle-glog-dev liblmdb-dev
 sudo apt-get install --assume-yes libatlas-base-dev
+sudo apt-get install --assume-yes libopenblas-dev
 sudo apt-get install --assume-yes python-dev
 
 # pull code

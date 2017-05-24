@@ -2,11 +2,12 @@
 
 mkdir -p /media/raajay/software
 
-# x server stuff (for emacs installation)
-sudo apt-get install --assume-yes build-essential texinfo libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libncurses-dev xvfb
+# common installs
+sudo apt-get install --assume-yes htop
 
 # spacemacs stuff
 sudo apt-get install --assume-yes ispell
+sudo apt-get install --assume-yes build-essential texinfo libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libncurses-dev xvfb
 wget http://ftpmirror.gnu.org/emacs/emacs-25.1.tar.gz -O /media/raajay/software/emacs-25.1.tar.gz
 cd /media/raajay/software; tar xvfz emacs-25.1.tar.gz
 cd /media/raajay/software/emacs-25.1; ./configure --without-x && make -j8 && sudo make install
