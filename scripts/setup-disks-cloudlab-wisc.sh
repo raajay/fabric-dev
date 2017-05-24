@@ -40,10 +40,12 @@ ln -s /media/cache /users/raajay86/.cache
 mkdir -p /media/share/maven_repo
 chown -R raajay86 /media/share
 chmod 777 /media/share/maven_repo
+
 mkdir -p /users/raajay86/.m2
 rm -f /users/raajay86/.m2/settings.xml
 mkdir -p /users/raajay86/.m2
-ln -s /usr/local/personal/bash/configs/mvn_settings.xml /users/raajay86/.m2/settings.xml
+ln -s /local/repository/scripts/mvn_settings.xml /users/raajay86/.m2/settings.xml
+chown -R raajay86 /users/raajay86/.m2
 
 # Create a dir for ivy cache
 mkdir -p /media/share/ivy2_repo
