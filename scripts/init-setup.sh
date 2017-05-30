@@ -4,6 +4,7 @@ mkdir -p /media/raajay/software
 
 # common installs
 sudo apt-get install --assume-yes htop
+sudo apt-get install --assume-yes clang
 
 # spacemacs stuff
 sudo apt-get install --assume-yes ispell
@@ -31,3 +32,13 @@ ln -s /media/raajay/software/dottmux/_tmux_monokai_simple_conf /users/raajay86/.
 
 # bash stuff
 cp /local/repository/script/bash_stuff /users/raajay86/.bash_aliases
+
+# rtags stuff
+sudo apt-get install --assume-yes clang libclang-dev cmake pkg-config bash-completion lua
+git clone --recursive https://github.com/Andersbakken/rtags.git /media/raajay/software/rtags
+cd /media/raajay/software/rtags; mkdir build && cd build && cmake .. && make -j8 && sudo make install
+mkdir -p ~/.config/systemd/user
+cp rdm.socket ~/.config/systemd/user/rdm.socket
+cp rdm.service ~/.config/systemd/user/rdm.service
+systemctl --user enable rdm.socket
+systemctl --user start rdm.socket
