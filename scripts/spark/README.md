@@ -13,3 +13,12 @@ definition/implementation, inspecting classes etc.. The steps to get everything 
 * The log files generate by the server can be seen in the "ENSIME-<project name>" file in the list of open buffers. Closing this buffer shuts down the server. TODO: see if the server can be started offline.
 
 * Check out init-spark.sh and ensime.sbt
+
+* Since, Spark is a large project ENSIME with terminal spacemacs is very slow. Speed can be improved by disabling semantic rendering. It can be done by adding the following to spacemacs config. Note that errors and suggestion (unused imports) are still highlighted.
+
+```
+  ;; disable semantic highlighting from ENSIME
+  (with-eval-after-load 'ensime
+    (unless (display-graphic-p)
+      (setq ensime-sem-high-enabled-p nil)))
+```
