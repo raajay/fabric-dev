@@ -20,3 +20,9 @@ cd /usr/lib/x86_64-linux-gnu; sudo ln -s libhdf5_serial_hl.so.8.0.2 libhdf5_hl.s
 cd /media/raajay/MLFABRIC/caffe; make
 
 # some changes has to also go in the make file for caffe
+cp /media/raajay/MLFABRIC/pmls/bosen-private/app/caffe-private/Makefile.config.example /media/raajay/MLFABRIC/pmls/bosen-private/app/caffe-private/Makefile.config
+# get cifar data
+
+# prepare cifar data
+
+

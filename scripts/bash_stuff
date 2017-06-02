@@ -1,3 +1,4 @@
+unset DISPLAY
 export PS1='\n\h \w \n\t \$ '
 
 alias ga='git add'
